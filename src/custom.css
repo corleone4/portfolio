@@ -1,0 +1,33 @@
+/* Estilos para a navbar */
+.default-layout-navbar {
+    display: flex;
+    justify-content: space-between; /* Garante que o logo fique centralizado e os itens à esquerda */
+    align-items: center;
+    padding: 0 15px; /* Ajuste o preenchimento conforme necessário */
+}
+
+.navbar-brand-wrapper {
+    flex: 1; /* Garante que o logo ocupe a largura disponível */
+}
+
+.navbar-menu-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens de navegação à esquerda */
+}
+
+.navbar-nav-left {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav-left .nav-item {
+    margin: 0 15px; /* Ajuste o espaçamento horizontal conforme necessário */
+}
+
+.navbar-nav-left .nav-link {
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto do link */
+}

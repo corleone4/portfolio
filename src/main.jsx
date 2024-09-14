@@ -1,10 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './template/Header.jsx';
-import Footer from './template/Footer.jsx';
 import * as React from "react";
-import './custom.css';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,12 +9,16 @@ import {
 import SobreMim from './pages/SobreMim.jsx';
 import Home from './pages/Home.jsx';
 import Contato from './pages/Contato.jsx';
+
+import './custom.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/style.css';
+import './assets/vendors/font-awesome/css/font-awesome.min.css';
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Home />
-    ),
+    element: ( <Home /> ),
   },
   {
     path: "sobremim",

@@ -1,30 +1,30 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../custom.css'; // Certifique-se de que o caminho para o CSS está correto
 
 function Header() {
     return (
-        <Navbar data-bs-theme="dark" expand="lg" className="bg-body-tertiary">
-            <Container fluid>
-                <Navbar.Brand href="#">Portfólio: Luan Henrique</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/sobremim">Sobre Mim</Nav.Link>
-                        <Nav.Link href="/contato">Contato</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <nav className="navbar default-layout-navbar col-lg-12 col-12 p-0 d-flex flex-row fixed-top">
+            <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a className="navbar-brand brand-logo" href="/"><img src="/img/logo.svg" alt="logo" /></a>
+                <a className="navbar-brand brand-logo-mini" href="/"><img src="/img/logo-mini.svg" alt="logo-mini" /></a>
+            </div>
+            <div className="navbar-menu-wrapper d-flex align-items-center">
+                <button className="navbar-toggler" type="button" data-toggle="minimize">
+                    <span className="mdi mdi-menu"></span>
+                </button>
+                <ul className="navbar-nav navbar-nav-left">
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">Home</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/sobremim">Sobre Mim</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     );
 }
 
