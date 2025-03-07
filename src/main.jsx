@@ -10,10 +10,8 @@ import SobreMim from './pages/SobreMim.jsx';
 import Home from './pages/Home.jsx';
 import Contato from './pages/Contato.jsx';
 
-import './custom.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/css/style.css';
-import './assets/vendors/font-awesome/css/font-awesome.min.css';
+import "../src/assets/app.css";
+import Aos from 'aos';
 
 const router = createBrowserRouter([
   {
@@ -21,15 +19,19 @@ const router = createBrowserRouter([
     element: ( <Home /> ),
   },
   {
-    path: "sobremim",
+    path: "projects",
     element: <SobreMim />,
   },
   {
-    path: "contato",
+    path: "about-me",
+    element: <SobreMim />,
+  },
+  {
+    path: "contact",
     element: <Contato />,
   },
 ]);
-
+Aos.init();
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header />  

@@ -1,8 +1,8 @@
 import React from "react";
 
-function SobreMim(){
+export default function SobreMim(){
     return(
-        <> Conteúdo da Sobre mim </>
+        <>
+        </>
     );
 }
-export default SobreMim;
