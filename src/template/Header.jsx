@@ -18,7 +18,7 @@ const handleScroll = (id) => {
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-slate-950 w-full">
+    <Disclosure as="nav" className="bg-slate-950 fixed z-50 w-full">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -33,7 +33,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img alt="Your Company" src="./public/img/weblogo.png" className="h-8 w-auto" />
+              <img alt="Your Company" src="./img/weblogo.png" className="h-8 w-auto" />
             </div>
             
             {/* Links da Navbar */}

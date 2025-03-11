@@ -28,14 +28,14 @@ export default function Hero() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1.5, opacity: 0.2 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        style={{ bottom: "5%", right: "15%" }}
+        style={{ bottom: "34%", right: "15%" }}
       />
       <motion.div
         className="absolute w-32 h-32 bg-blue-500 rounded-full opacity-20 blur-3xl"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1.3, opacity: 0.2 }}
         transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
-        style={{ top: "40%", left: "50%", transform: "translate(-50%, -50%)" }}
+        style={{ top: "50%", left: "35%", transform: "translate(-50%, -50%)" }}
       />
 
       {/* Conteúdo principal */}
