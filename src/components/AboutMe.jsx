@@ -17,7 +17,7 @@ export default function AboutMe() {
           A minha trajetória
         </h1>
         <div className="w-full max-w-4xl mx-auto">
-          <div className="mb-10" data-aos="fade-up" data-aos-delay="500">
+          <div className="mb-10" data-aos="fade-up" data-aos-delay="100">
             <h2 className="text-2xl font-semibold mb-4">Minha Jornada</h2>
             <div className="border-l-4 border-white pl-4">
               {[
@@ -26,49 +26,45 @@ export default function AboutMe() {
                   date_end: "Dezembro de 2024",
                   title:
                     "Curso Técnico de Desenvolvimento de Sistemas - SENAI Santa Bárbara d'Oeste",
-                  delay: 100,
                 },
                 {
                   date_start: "Setembro de 2023",
                   date_end: "Dezembro de 2023",
                   title:
                     "Curso de Programação em C# - SENAI Santa Bárbara d'Oeste",
-                  delay: 200,
                 },
                 {
                   date_start: "Agosto de 2024",
                   date_end: "Dezembro de 2024",
                   title:
                     "Curso de React e React Native - SENAI Santa Bárbara d'Oeste",
-                  delay: 300,
+                  
                 },
                 {
                   date_start: "Agosto de 2024",
                   date_end: "Dezembro de 2024",
                   title:
                     "Interfaces Web e Bootstrap com Frameworks de PHP - SENAI Santa Bárbara d'Oeste",
-                  delay: 400,
+                 
                 },
                 {
                   date_start: "Outubro de 2024",
                   date_end: "Dezembro de 2024",
                   title:
                     "Python para Data Science - SENAI Santa Bárbara d'Oeste",
-                  delay: 500,
+                  
                 },
                 {
                   date_start: "Fevereiro de 2025",
                   date_end: "",
                   title:
                     "Análise e Desenvolvimento de Sistemas - FATEC Americana 'Ministro Ralph Biasi'",
-                  delay: 600,
+                 
                 },
               ].map((item, index) => (
                 <div
                   key={index}
                   className="mb-8"
-                  data-aos="fade-right"
-                  data-aos-delay={item.delay}
                 >
                   <div className="flex items-center mb-2">
                     <div className="w-4 h-4 bg-white rounded-full mr-4"></div>
@@ -85,7 +81,6 @@ export default function AboutMe() {
         <p
           className="text-lg mb-6 max-w-3xl mx-auto"
           data-aos="fade-up"
-          data-aos-delay="700"
         >
           Comecei no mundo da programação no meio de 2023, com o curso técnico
           de Desenvolvimento de Sistemas no SENAI de Santa Bárbara d'Oeste. A

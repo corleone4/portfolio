@@ -1,70 +1,62 @@
-import { motion } from "framer-motion";
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import React, { useEffect } from "react";
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from "framer-motion";
 
-export default function Hero() {
+export default function Hero() { 
+
+  const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+  const color = useMotionValue(COLORS_TOP[0]);
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+
+  useEffect(() => {
+    animate(color, COLORS_TOP, {
+      ease: "easeInOut",
+      duration: 12,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  }, []);
+
   return (
-    <section id='home' className="relative flex flex-col items-center justify-center h-screen text-center bg-slate-950 text-white px-6 overflow-hidden">
-      {/* Linhas decorativas */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="absolute top-1/4 left-10 w-20 h-1 bg-blue-400 rotate-12" />
-        <div className="absolute bottom-1/3 right-16 w-32 h-1 bg-blue-400 -rotate-12" />
-        <div className="absolute top-1/2 left-1/3 w-24 h-1 bg-blue-400 rotate-45" />
-      </motion.div>
-
-      {/* Círculos difusos */}
-      <motion.div
-        className="absolute w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-3xl"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1.2, opacity: 0.2 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        style={{ top: "10%", left: "10%" }}
-      />
-      <motion.div
-        className="absolute w-56 h-56 bg-blue-500 rounded-full opacity-20 blur-3xl"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1.5, opacity: 0.2 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-        style={{ bottom: "34%", right: "15%" }}
-      />
-      <motion.div
-        className="absolute w-32 h-32 bg-blue-500 rounded-full opacity-20 blur-3xl"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1.3, opacity: 0.2 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
-        style={{ top: "50%", left: "35%", transform: "translate(-50%, -50%)" }}
-      />
-
+    <motion.section
+      style={{
+        backgroundImage,
+      }}
+      id="home"
+      className="relative grid min-h-screen place-content-center overflow-hidden bg-slate-950 px-4 py-24 text-gray-200"
+    >
       {/* Conteúdo principal */}
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold mb-4 relative z-10"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Olá, eu sou o<span className="text-blue-400"> Luan</span>
-      </motion.h1>
-      <motion.p
-        className="text-lg md:text-xl mb-6 max-w-2xl relative z-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        Apelidado de <span className="text-blue-400"> Corleone</span>, sou
-        desenvolvedor web crescendo cada vez mais em aprendizado e experiência.
-      </motion.p>
-      <motion.a
-        href="#projects"
-        className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium transition relative z-10"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        Veja Meus Projetos
-      </motion.a>
-    </section>
+      <div className="relative z-10 flex flex-col items-center">
+        <motion.h1
+          className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Olá, eu sou o<span className="text-blue-400"> Luan</span>
+        </motion.h1>
+        <motion.p
+          className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Apelidado de <span className="text-blue-400"> Corleone</span>, sou
+          desenvolvedor web crescendo cada vez mais em aprendizado e
+          experiência.
+        </motion.p>
+      </div>
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={55} count={2500} factor={5} fade speed={3} />
+        </Canvas>
+      </div>  
+    </motion.section>
   );
 }

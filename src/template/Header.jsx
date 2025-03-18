@@ -18,7 +18,7 @@ const handleScroll = (id) => {
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-slate-950 fixed z-50 w-full">
+    <Disclosure as="nav" className="bg-slate-950 z-50 w-full">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
