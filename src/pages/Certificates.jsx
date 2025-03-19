@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ImageCard from "./ImageCard";
+import ImageCard from "../components/ImageCard.jsx";
 import { motion } from "framer-motion";
-import AnimatedTextCard from "./AnimatedTextCard";
-import TiltCard from "./TiltCard";
+import AnimatedTextCard from "../components/AnimatedTextCard.jsx";
+import TiltCard from "../components/TiltCard.jsx";
 import TiltCardModal from "../components/TiltCardModal.jsx";
 
 export default function Certificates() {
@@ -12,11 +12,13 @@ export default function Certificates() {
     { image: "./img/fund-cert.jpg", auth_link: "http://www.sp.senai.br/consulta-certificado?qrcode=51424238294/14716769"},
     { image: "./img/csharp-cert.jpg", auth_link: "http://www.sp.senai.br/consulta-certificado?qrcode=51423235086/14072248"},
     { image: "./img/python-cert.jpg", auth_link: "http://www.sp.senai.br/consulta-certificado?qrcode=51424239115/14809347"},
+    { image: "./img/etica-cert.jpg", auth_link: "http://www.sp.senai.br/consulta-certificado?qrcode=00033333/7342272"},
+    { image: "./img/lgpd-cert.jpg", auth_link: "http://www.sp.senai.br/consulta-certificado?qrcode=00025077/7342272"},
   ];
 
   return (
     <>
-      <section className="py-12 bg-slate-950 sm:py-16 lg:py-20">
+      <section id="certificates" className="py-12 bg-slate-950 sm:py-16 lg:py-20">
         <div
           className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
           data-aos="fade-up"
@@ -30,14 +32,6 @@ export default function Certificates() {
                 Veja <span className="text-red-400">aqui</span> as minhas
                 certificações e diplomas!
               </h2>
-            </div>
-
-            <div className="mt-8 text-center md:mt-16 md:order-3">
-              <a
-                href="#"
-                title=""
-                className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
-              ></a>
             </div>
 
             <div className="relative mt-4 md:mt-24 md:order-2">
@@ -72,7 +66,6 @@ export default function Certificates() {
           onClose={() => setSelectedCard(null)}
           cert_auth={selectedCard.auth_link}
         />
-        
       )}
       
     </>

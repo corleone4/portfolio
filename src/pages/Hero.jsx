@@ -29,7 +29,7 @@ export default function Hero() {
         backgroundImage,
       }}
       id="home"
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-slate-950 px-4 py-24 text-gray-200"
+      className="relative grid min-h-screen place-content-center overflow-hidden bg-slate-950 px-4 py-28 text-gray-200"
     >
       {/* Conteúdo principal */}
       <div className="relative z-10 flex flex-col items-center">
@@ -54,7 +54,7 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 z-0">
         <Canvas>
-          <Stars radius={55} count={2500} factor={5} fade speed={3} />
+          <Stars radius={40} count={2000} factor={4} fade speed={3} />
         </Canvas>
       </div>  
     </motion.section>

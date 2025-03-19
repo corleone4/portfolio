@@ -1,7 +1,11 @@
 import Header from "../template/Header.jsx";
-import Hero from "../components/Hero.jsx";
-import AboutMe from "../components/AboutMe.jsx";  
-import Certificates from "../components/Certificates.jsx";  
+import Footer from "../template/Footer.jsx";
+
+import Hero from "./Hero.jsx";
+import AboutMe from "./AboutMe.jsx";  
+import Certificates from "./Certificates.jsx";  
+import Social from "./Social.jsx";
+
 export default function Home() {
 
   return (
@@ -10,6 +14,8 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Certificates />
+      <Social />
+      <Footer />
     </>
   );
 }

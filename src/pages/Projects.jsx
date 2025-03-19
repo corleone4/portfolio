@@ -1,7 +1,7 @@
 import React from "react";
-import ImageCard from "./ImageCard";
+import ImageCard from "../components/ImageCard";
 import { motion } from "framer-motion";
-import AnimatedTextCard from "./AnimatedTextCard";
+import AnimatedTextCard from "../components/AnimatedTextCard";
 
 export default function Contact() {
   return (
