@@ -30,7 +30,7 @@ export default function TiltCardModal({ selectedCard, onClose, cert_auth }) {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1.0 }}
         exit={{ opacity: 0, scale: 0.9 }}
-        className="bg-slate-950 p-6 rounded-lg shadow-lg w-full max-w-lg sm:max-w-md relative"
+        className="dark:bg-[#121212] bg-gray-200 p-6 rounded-lg shadow-lg w-full max-w-lg sm:max-w-md relative"
       >
         {/* Botão de Fechar */}
         <button
@@ -49,8 +49,8 @@ export default function TiltCardModal({ selectedCard, onClose, cert_auth }) {
         <h2 className="text-xl font-bold text-white">{selectedCard.title}</h2>
         <p className="text-gray-400 mt-2">{selectedCard.text}</p>
 
-        <a href={cert_auth}>
-          <button className="w-full mt-4 bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md">
+        <a href={cert_auth} target="_blank">
+          <button className="w-full mt-4 dark:bg-stone-900 dark:hover:bg-stone-800 dark:text-white bg-gray-200 text-gray-900 font-semibold py-2 px-4 rounded-md">
             Confirmar Autenticidade
           </button>
         </a>
