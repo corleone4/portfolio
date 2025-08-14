@@ -1,11 +1,20 @@
 export default function Card({ title, image, children }) {
   return (
-    <div className="px-8 overflow-auto py-2 flex flex-col justify-center items-center rounded-md bg-gray-300 dark:bg-stone-800">
-      <h2 className="text-xl lg:text-2xl font-bold text-stone-900 dark:text-gray-100 hover:text-black dark:hover:text-white ">
-        {title}
-      </h2>
-      <img className="lg:size-36 sm:size-12 w-full mx-auto rounded-sm" src={image} />
-      {children}
+    <div className="rounded-2xl shadow-md bg-white dark:bg-stone-900 overflow-hidden">
+      <div className="w-full h-48 relative group">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110 group-hover:opacity-85"
+        />
+        <p className="absolute inset-0 flex items-center justify-center text-black dark:text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Ver mais
+        </p>
+      </div>
+      <div className="p-4">
+        <h2 className="text-xl font-semibold dark:text-white">{title}</h2>
+        <p className="mt-2 text-sm">{children}</p>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "./Logo";
+import FaviconSwitcher from "./FavIconSwitcher";
 const tabs = [
   { name: "Sobre mim", href: "#about-me" },
   { name: "Projetos", href: "#projects" },
@@ -20,6 +21,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
+            <FaviconSwitcher/>
             <Logo />
           </a>
         </div>
