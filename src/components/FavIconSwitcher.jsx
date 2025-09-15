@@ -10,10 +10,10 @@ export default function FaviconSwitcher() {
       const link =
         document.querySelector("link[rel*='icon']") ||
         document.createElement("link");
-      link.type = "image/x-icon";
-      link.rel = "icon";
-      link.href = isDark ? faviconLight : faviconDark;
-      document.head.appendChild(link);
+        link.type = "image/x-icon";
+        link.rel = "icon";
+        link.href = isDark ? faviconLight : faviconDark;
+        document.head.appendChild(link);
     };
 
     setFavicon(media.matches);

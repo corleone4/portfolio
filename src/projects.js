@@ -1,6 +1,8 @@
 import none from "./assets/none.gif";
 import capa1 from "./assets/projects/capa_projeto1.png";
 import capa2 from "./assets/projects/capa_projeto2.png";
+import capa3 from "./assets/projects/capa_projeto3.png";
+
 import projeto1_1 from "./assets/projects/clinica-fisio/projeto1_1.png";
 import projeto1_2 from "./assets/projects/clinica-fisio/projeto1_2.png";
 import projeto1_3 from "./assets/projects/clinica-fisio/projeto1_3.png";
@@ -17,6 +19,13 @@ import projeto2_6 from "./assets/projects/brookliss/projeto2_6.png";
 import projeto2_7 from "./assets/projects/brookliss/projeto2_7.png";
 import projeto2_8 from "./assets/projects/brookliss/projeto2_8.png";
 
+import projeto3_1 from "./assets/projects/leitura-biblica/projeto3_1.png";
+import projeto3_2 from "./assets/projects/leitura-biblica/projeto3_2.png";
+import projeto3_3 from "./assets/projects/leitura-biblica/projeto3_3.png";
+import projeto3_4 from "./assets/projects/leitura-biblica/projeto3_4.png";
+import projeto3_5 from "./assets/projects/leitura-biblica/projeto3_5.png";
+import projeto3_6 from "./assets/projects/leitura-biblica/projeto3_6.png";
+import projeto3_7 from "./assets/projects/leitura-biblica/projeto3_7.png";
 
 export const projects = [
     {
@@ -52,10 +61,20 @@ export const projects = [
     },
     {
         id: 2,
-        name: "Projeto 3",
-        capa: none,
-        description: "Ainda não há um projeto aqui!",
-        link: "#"
+        name: "Leitura Biblica",
+        capa: capa3,
+        images: [
+            projeto3_1,
+            projeto3_2,
+            projeto3_3,
+            projeto3_4,
+            projeto3_5,
+            projeto3_6,
+            projeto3_7,
+         
+        ],
+        description: "Lista de conclusão de capítulos da Bíblia Sagrada",
+        link: "https://leitura-biblica-nine.vercel.app/"
     },
     {
         id: 3,
