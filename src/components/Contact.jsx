@@ -40,12 +40,12 @@ export default function Contact() {
               text="LinkedIn"
             />
             <SocialLink
-              href="https://instagram.com/lu_4.n"
+              href="https://instagram.com/lu.henri4"
               icon={<FaInstagram />}
               text="Instagram"
             />
             <SocialLink
-              href="mailto:lluann930@gmail.com"
+              href="mailto:luan.ferreira.f.04@gmail.com"
               icon={<FaEnvelope />}
               text="Email"
             />
